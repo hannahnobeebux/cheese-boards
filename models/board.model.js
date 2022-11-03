@@ -14,6 +14,8 @@ Board.init ({
         type: DataTypes.NUMBER 
     }
 
+}, {
+    sequelize: db
 })
 
 module.exports = Board 

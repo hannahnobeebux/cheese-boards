@@ -15,6 +15,8 @@ User.init ({
     email: {
         type: DataTypes.STRING
     }
+}, {
+    sequelize: db
 })
 
 module.exports = User 

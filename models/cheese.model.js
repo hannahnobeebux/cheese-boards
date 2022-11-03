@@ -11,6 +11,8 @@ Cheese.init ({
         type: DataTypes.STRING
     }
 
+}, {
+    sequelize: db
 })
 
 module.exports = Cheese 
