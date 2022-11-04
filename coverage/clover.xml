@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1667574499918" clover="3.2.0">
-  <project timestamp="1667574499918" name="All files">
+<coverage generated="1667579910586" clover="3.2.0">
+  <project timestamp="1667579910586" name="All files">
     <metrics statements="31" coveredstatements="31" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="32" coveredelements="32" complexity="0" loc="31" ncloc="31" packages="2" files="6" classes="6"/>
     <package name="db">
       <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -15,10 +15,10 @@
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="10" count="13" type="stmt"/>
-        <line num="14" count="13" type="stmt"/>
-        <line num="24" count="13" type="stmt"/>
-        <line num="32" count="13" type="stmt"/>
+        <line num="10" count="15" type="stmt"/>
+        <line num="14" count="15" type="stmt"/>
+        <line num="24" count="15" type="stmt"/>
+        <line num="32" count="15" type="stmt"/>
         <line num="51" count="1" type="stmt"/>
       </file>
     </package>

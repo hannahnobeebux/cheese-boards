@@ -1,27 +1,21 @@
 //STEP ONE - REQUIRING THE CORRECT FILES TO TEST 
-
 //STEP TWO - TESTING 
 //TEST ONE - THE TABLE IS BEING CREATED
+//TEST TWO - DATA IS BEING INSERTED 
+//TEST THREE - THE TABLE CAN BE DELETED/DROPPED 
 
 //create the database empty 
 //add data into it 
 //check the data is true 
-
-
-//TEST TWO - DATA IS BEING INSERTED 
-
-//TEST THREE - THE TABLE CAN BE DELETED/DROPPED 
-
 
 const seed = require("../db/seed");
 const db = require("../db/db");
 const { Board, Cheese, User } = require("../models");
 
 
-//all the user model testing in one describe block
-
 //TESTING USER MODEL 
 describe("User Model", () => {
+    //SYNCING THE USER MODEL WITH DB BEFORE TESTING  
     beforeEach (async () => {
         await db.sync({force: true})
         // await User.create({
@@ -32,17 +26,26 @@ describe("User Model", () => {
   
     })
 
-    //SYNCING THE USER MODEL WITH DB BEFORE TESTING  
     test ("Can successfully add a name", async () => {
         // expect(user.getDataValue("name")).toMatch('Hannah')
         const user = await User.findOne({where: {name: "Esgrid"}})
         expect(user.name).toBe("Esgrid")
     })
 
+    test("The name is a valid string", async () => {
+        const user = await User.findOne({where: {name: "Bradley"}})
+        expect(user.getDataValue("name")).toBe("Bradley");
+    })
+
     test("Can successfully add an email", async () => {
         const user = await User.findOne({where: {name: "Esgrid"}})
         expect(user.email).toBe("esgrid@gmail.com")
 
+    })
+
+    test("The email is a valid string", async () => {
+        const user = await User.findOne({where: {name: "Bradley"}})
+        expect(user.getDataValue("email")).toBe("bradley@gmail.com");
     })
 
     test("Can successfully create a single row within User", async () => {
@@ -157,15 +160,6 @@ describe ("ONE-TO-MANY RELATIONSHIP BETWEEN USER AND BOARD", () => {
         expect(await user.countBoards()).toBe(5)
 
     })
-
-    // test("The Board table has a User id", async () => {
-    //     let aBoard = await Board.findOne({where: {}})
-    // })
-
-    // test("Cheese can be on many boards", async () => {
-    //     const 
-    // })
-
 })
 
 describe ("MANY-TO-MANY RELATIONSHIP BETWEEN BOARDS AND CHEESE + EAGER LOADING", () => {
@@ -178,8 +172,6 @@ describe ("MANY-TO-MANY RELATIONSHIP BETWEEN BOARDS AND CHEESE + EAGER LOADING",
         expect(await cheese.countBoards()).toBe(2)
         // console.log(board1)
     })
-
-    //BOARD.ADDCHEESES([])
 
     test("A board can have several cheeses", async () => {
         let cheese1 = await Cheese.findByPk(1)
@@ -204,6 +196,8 @@ describe ("MANY-TO-MANY RELATIONSHIP BETWEEN BOARDS AND CHEESE + EAGER LOADING",
         let frenchCheese = await Board.findByPk(1 , {
             include: Cheese
         })
+        //A BOARD BEING LOADED WITH ITS CHEESES 
+        console.log("example: A BOARD BEING LOADED WITH ITS CHEESES")
         console.log(JSON.stringify(frenchCheese, null, 2))
         expect(await frenchCheese.countCheeses()).toBe(3)
     })
@@ -216,6 +210,8 @@ describe ("MANY-TO-MANY RELATIONSHIP BETWEEN BOARDS AND CHEESE + EAGER LOADING",
     })
 })
 
+//CODE/METHODS THAT DON'T WORK/HELPED ME FIND A SOLUTION 
+///---1---
 // describe ("Eager Loading" , async () => {
 //     beforeEach(async () => {
 //         await db.sync({force: true})
@@ -228,4 +224,13 @@ describe ("MANY-TO-MANY RELATIONSHIP BETWEEN BOARDS AND CHEESE + EAGER LOADING",
 //         console.log(JSON.stringify(findParmesan, null, 2))
 //     })
 // })
+
+//---2---
+    // test("The Board table has a User id", async () => {
+    //     let aBoard = await Board.findOne({where: {}})
+    // })
+
+    // test("Cheese can be on many boards", async () => {
+    //     const 
+    // })
 
