@@ -1,0 +1,1 @@
+//using the built in methods when tables get relationships 
