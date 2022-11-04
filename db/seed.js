@@ -17,6 +17,16 @@ async function seed () {
         
     ])
 
+    await Board.bulkCreate([
+        {type: "French Cheese", description: "Soft Cheese", rating: 5}, 
+        {type: "Soft Cheese", description: "Soft Cheese", rating: 5}, 
+    ])
+
+    await User.bulkCreate([
+        {name: "Felicity", email: "felicity@gmail.com" },
+        {name: "Esgrid", email: "esgrid@gmail.com" }
+    ])
+
 
 }
 
@@ -25,3 +35,5 @@ async function seed () {
 //EG: ADDBOARDS, SOFTCHEESEBOARDS 
 
 seed()
+
+// module.exports = seed 

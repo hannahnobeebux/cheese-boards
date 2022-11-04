@@ -14,8 +14,7 @@ Board.belongsTo(User)
 Cheese.belongsToMany(Board, {through: 'Cheese_Board'})
 Board.belongsToMany(Cheese, {through: 'Cheese_Board'})
 
-//CREATING A USER AND A BOARD 
-const newUser = User.create({name: "Esgrid", email: "esgrid@gmail.com"})
+
 
 module.exports = {Board, Cheese, User}
 

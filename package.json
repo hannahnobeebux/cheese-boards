@@ -4,7 +4,7 @@
   "description": "A Sequelize DB for users to collect cheeses and place them on boards",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll --coverage --maxWorkers 99",
+    "test": "jest --watchAll --coverage",
     "seed": "cd db && node seed.js", 
     "main": "cd src && node main.js"
   },
