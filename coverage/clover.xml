@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1667560549071" clover="3.2.0">
-  <project timestamp="1667560549071" name="All files">
-    <metrics statements="24" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="24" coveredelements="24" complexity="0" loc="24" ncloc="24" packages="2" files="5" classes="5"/>
+<coverage generated="1667574499918" clover="3.2.0">
+  <project timestamp="1667574499918" name="All files">
+    <metrics statements="31" coveredstatements="31" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="32" coveredelements="32" complexity="0" loc="31" ncloc="31" packages="2" files="6" classes="6"/>
     <package name="db">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="db.js" path="/Users/nobeebuxh/Desktop/[BOOTCAMP] Programming/week-5/cheese-project/cheese-boards/db/db.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="seed.js" path="/Users/nobeebuxh/Desktop/[BOOTCAMP] Programming/week-5/cheese-project/cheese-boards/db/seed.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="10" count="13" type="stmt"/>
+        <line num="14" count="13" type="stmt"/>
+        <line num="24" count="13" type="stmt"/>
+        <line num="32" count="13" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
       </file>
     </package>
     <package name="models">
@@ -44,7 +54,7 @@
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
       </file>
     </package>
   </project>
